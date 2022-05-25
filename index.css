@@ -1,9 +1,9 @@
 h1 {
     color: goldenrod;
-    
 }
 
 body{
+    padding:20%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-image: url(image/table.jpg);
     background-size: cover;
@@ -15,4 +15,24 @@ body{
 
 #message-el{
     font-style: italic;
+}
+
+/* 
+3. Style the button according to the provided design
+text color - #016f32
+width      - 150px
+background - goldenrod
+ */
+ 
+
+
+button {
+    background-color: goldenrod;
+    color: green; 
+    width: 150px;  
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    font-weight: bold;
+    border:none;
+    border-radius:2px;
 }

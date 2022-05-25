@@ -15,11 +15,14 @@ let message = ""
 
 // 2. Reassign the message variable to the string we're logging out
 
+// Create a startGame() function. Move the conditional
+// below (line 11-20) inside the body of the function.
+function startGame(){
 
 if(sum < 21){
     message = ("Do you want to draw a new card?")
     }else if(sum === 21){
-    message = ("You've a BlackJack!")
+    message = ("You have a BlackJack!")
     hasBlackJack = true
 }else{
     message = ("You're out of the game!")
@@ -29,7 +32,9 @@ if(sum < 21){
 
 //CashOut
 console.log(hasBlackJack)
-// 3. Log it out to check that you're doing it right
+// 3. Log is Alive out to check that you're doing it right
 console.log(isAlive)
 // 3. Log message out!
 console.log(message)
+
+}
