@@ -1,27 +1,27 @@
-// Create two variables, firstCard and secondCard
-// Set their values to a random number between 2-11
-//Create a variable, sum and set it to the sum of the two cards
+//Get the value of message-el element from the HTML
+let messageEl = document.getElementById("message-el")
 
+//Declare of Card Values
 let firstCard = 10
 let secondCard = 11
+//Add the 2 cards
 let sum = firstCard + secondCard
+//Determine if player has a BlackJacj
 let hasBlackJack = false
-// 1. Create a variable called isAlive and assign it to true
+//Determine if player is still in the game or out of the game
 let isAlive = true
+//Log out the sum of the 2 cards
 console.log(sum)
 
-// 1. Declare a variable called message and assign its value to an empty string
+//Declare the variable that will contain the message
 let message = ""
 
-// 2. Reassign the message variable to the string we're logging out
-
-// Create a startGame() function. Move the conditional
-// below (line 11-20) inside the body of the function.
+//function that will execute once button StartGame was click on the page
 function startGame(){
 
 if(sum < 21){
     message = ("Do you want to draw a new card?")
-    }else if(sum === 21){
+}else if(sum === 21){
     message = ("You have a BlackJack!")
     hasBlackJack = true
 }else{
@@ -30,11 +30,7 @@ if(sum < 21){
     isAlive = false
 }
 
-//CashOut
-console.log(hasBlackJack)
-// 3. Log is Alive out to check that you're doing it right
-console.log(isAlive)
-// 3. Log message out!
-console.log(message)
+//Display the message on the page
+messageEl.textContent = message
 
 }
