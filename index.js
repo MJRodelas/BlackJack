@@ -1,7 +1,10 @@
 //Get the value of message-el element from the HTML
 let messageEl = document.getElementById("message-el")
 //Get the value of sum-el element from the HTML
-let sumEl = document.getElementById("sum-el")
+// let sumEl = document.getElementById("sum-el")
+//Using querySelector on JS
+let sumEl = document.querySelector("#sum-el")
+
 
 //Declare of Card Values
 let firstCard = 10
