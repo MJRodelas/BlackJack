@@ -22,10 +22,12 @@ console.log(cards)
 //Declare the variable that will contain the message
 let message = ""
 
+
 let playerName = "MJ Rodelas"
 let playerChips = 145
-//Get the value of cards-el element from the HTML
+//Get the value of player-el element from the HTML
 let playerEl = document.getElementById("player-el")
+playerEl.textContent = playerName + ": $" + playerChips
 
 
 function getRamdonCard(){
@@ -100,7 +102,7 @@ sumEl.textContent = "Sum: " + sum
 //function that will execute once newCard button was click on the page
 function newCard(){
 
-    console.log("Drawing a new card")
+    // console.log("Drawing a new card")
 
     //cards.length - added so that player can only have maximum of 4 cards
 if (isAlive === true && hasBlackJack === false && 
