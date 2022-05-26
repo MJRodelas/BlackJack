@@ -14,5 +14,7 @@ let myEducation = [
     "Mabalacat City College"
 ]
 
-console.log(myExperience)
+// console.log(myExperience)
 console.log(myEducation)
+
+console.log(myEducation.length)
