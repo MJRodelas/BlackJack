@@ -23,6 +23,11 @@ console.log(sum)
 //Declare the variable that will contain the message
 let message = ""
 
+//function that will execute once newCard button was click on the page
+function newCard(){
+    console.log("Drawing a new card")
+}
+
 //function that will execute once button StartGame was click on the page
 function startGame(){
 
@@ -36,6 +41,8 @@ if(sum < 21){
     // 2. Flip its value to false in the appropriate code block 
     isAlive = false
 }
+
+
 
 //Display the message on the page
 messageEl.textContent = message
