@@ -11,6 +11,8 @@ let cardsEl = document.getElementById("cards-el")
 //Declare of Card Values
 let firstCard = 10
 let secondCard = 11
+// array of cards = order list of items
+let cards = [firstCard,secondCard] 
 //Add the 2 cards
 let sum = firstCard + secondCard
 //Determine if player has a BlackJacj
@@ -48,8 +50,10 @@ if(sum < 21){
 messageEl.textContent = message
 //Display the sum on the page
 sumEl.textContent = "Sum: " + sum
-//Display the cards on the page
-cardsEl.textContent = "Cards: " + firstCard + "  " + secondCard
+//Display the cards on the page - removed
+// cardsEl.textContent = "Cards: " + firstCard + "  " + secondCard 
+//Display the cards on the page using array
+cardsEl.textContent = "Cards: " + cards[0] + "  " + cards[1] 
 }
 
 //function that will execute once newCard button was click on the page
