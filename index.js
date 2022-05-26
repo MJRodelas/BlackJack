@@ -24,9 +24,7 @@ console.log(sum)
 let message = ""
 
 //function that will execute once newCard button was click on the page
-function newCard(){
-    console.log("Drawing a new card")
-}
+
 
 //function that will execute once button StartGame was click on the page
 function startGame(){
@@ -47,7 +45,15 @@ if(sum < 21){
 //Display the message on the page
 messageEl.textContent = message
 //Display the sum on the page
-sumEl.textContent +=sum
+sumEl.textContent = "Sum: " + sum
 //Display the cards on the page
 cardsEl.textContent = "Cards: " + firstCard + "  " + secondCard
+}
+
+function newCard(){
+    console.log("Drawing a new card")
+    let thirdCard = 6
+    sum += thirdCard
+    console.log(sum)
+    startGame()
 }
