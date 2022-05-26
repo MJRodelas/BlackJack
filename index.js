@@ -53,7 +53,13 @@ sumEl.textContent = "Sum: " + sum
 //Display the cards on the page - removed
 // cardsEl.textContent = "Cards: " + firstCard + "  " + secondCard 
 //Display the cards on the page using array
-cardsEl.textContent = "Cards: " + cards[0] + "  " + cards[1] 
+cardsEl.textContent = "Cards: " 
+//Display the cards on the page using array and for loop
+    for ( let i = 0;  i < cards.length;  i++ )  {
+        
+        cardsEl.textContent += cards[i] + " "
+
+    }
 }
 
 //function that will execute once newCard button was click on the page
