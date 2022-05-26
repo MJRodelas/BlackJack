@@ -27,7 +27,11 @@ console.log(sum)
 let message = ""
 
 function getRamdonCard(){
-    return 5
+    return Math.floor(Math.random() * 13) + 1
+    //Math.random - generates random number from 0.000 to 0.999
+    //Math.floor - removes decimals
+    //Multiply by 13 + Math.floor - generate random number from  0 to 12
+    //Plus 1 - generate random number from  1 to 13
 }
 
 //function that will execute once button StartGame was click on the page
