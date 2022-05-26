@@ -22,6 +22,10 @@ console.log(cards)
 //Declare the variable that will contain the message
 let message = ""
 
+let playerName = "MJ Rodelas"
+let playerChips = 145
+//Get the value of cards-el element from the HTML
+let playerEl = document.getElementById("player-el")
 
 
 function getRamdonCard(){
@@ -49,7 +53,7 @@ function getRamdonCard(){
 //function that will execute once button StartGame was click on the page
 function startGame(){
     //Change isAlive to true once startGame was clicked
-       let isAlive = true
+       isAlive = true
    //Get random numbers for the first and second card
        let firstCard = getRamdonCard()
        let secondCard = getRamdonCard()
@@ -65,7 +69,14 @@ function startGame(){
 
 //function will execute when it's called on the startGame and newCard functions
 function renderGame(){
+//Display the cards on the page using array
+cardsEl.textContent = "Cards: " 
+//Display the cards on the page using array and for loop
+    for ( let i = 0;  i < cards.length;  i++ )  {
+        
+        cardsEl.textContent += cards[i] + " "
 
+    }
 if(sum < 21){
     message = ("Do you want to draw a new card?")
 }else if(sum === 21){
@@ -83,19 +94,19 @@ messageEl.textContent = message
 sumEl.textContent = "Sum: " + sum
 //Display the cards on the page - removed
 // cardsEl.textContent = "Cards: " + firstCard + "  " + secondCard 
-//Display the cards on the page using array
-cardsEl.textContent = "Cards: " 
-//Display the cards on the page using array and for loop
-    for ( let i = 0;  i < cards.length;  i++ )  {
-        
-        cardsEl.textContent += cards[i] + " "
 
-    }
 }
 
 //function that will execute once newCard button was click on the page
 function newCard(){
+
     console.log("Drawing a new card")
+
+    //cards.length - added so that player can only have maximum of 4 cards
+if (isAlive === true && hasBlackJack === false && 
+    cards.length < 4){
+
+
     //Get random numbers for the third card
     let thirdCard = getRamdonCard()
     // adding the thirdcard on the sum
@@ -103,8 +114,8 @@ function newCard(){
     //adding the thirdcard to the cards array
     cards.push(thirdCard)
     //display sum on the page
-    console.log(sum)
-    console.log(cards)
     renderGame()
+
+}
 
 }
