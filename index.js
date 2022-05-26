@@ -22,12 +22,15 @@ console.log(cards)
 //Declare the variable that will contain the message
 let message = ""
 
+let player = {
+     name : "MJ Rodelas",
+     chips : 5000
+}
 
-let playerName = "MJ Rodelas"
-let playerChips = 145
+
 //Get the value of player-el element from the HTML
 let playerEl = document.getElementById("player-el")
-playerEl.textContent = playerName + ": $" + playerChips
+playerEl.textContent = player.name + ": ₱ " + player.chips
 
 
 function getRamdonCard(){
