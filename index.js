@@ -8,9 +8,10 @@ let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
 
 
+
 //Declare of Card Values
-let firstCard = 10
-let secondCard = 11
+let firstCard = getRamdonCard()
+let secondCard = getRamdonCard()
 // array of cards = order list of items
 let cards = [firstCard,secondCard] 
 //Add the 2 cards
@@ -24,6 +25,10 @@ console.log(sum)
 
 //Declare the variable that will contain the message
 let message = ""
+
+function getRamdonCard(){
+    return 5
+}
 
 //function that will execute once button StartGame was click on the page
 function startGame(){
@@ -65,7 +70,7 @@ cardsEl.textContent = "Cards: "
 //function that will execute once newCard button was click on the page
 function newCard(){
     console.log("Drawing a new card")
-    let thirdCard = 6
+    let thirdCard = getRamdonCard()
     // adding the thirdcard on the sum
     sum += thirdCard
     //adding the thirdcard to the cards array
