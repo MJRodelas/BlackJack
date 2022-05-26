@@ -60,7 +60,13 @@ cardsEl.textContent = "Cards: " + cards[0] + "  " + cards[1]
 function newCard(){
     console.log("Drawing a new card")
     let thirdCard = 6
+    // adding the thirdcard on the sum
     sum += thirdCard
+    //adding the thirdcard to the cards array
+    cards.push(thirdCard)
+    //display sum on the page
     console.log(sum)
+    console.log(cards)
     renderGame()
+
 }
