@@ -1,5 +1,7 @@
 //Get the value of message-el element from the HTML
 let messageEl = document.getElementById("message-el")
+//Get the value of sum-el element from the HTML
+let sumEl = document.getElementById("sum-el")
 
 //Declare of Card Values
 let firstCard = 10
@@ -22,7 +24,7 @@ function startGame(){
 if(sum < 21){
     message = ("Do you want to draw a new card?")
 }else if(sum === 21){
-    message = ("You have a BlackJack!")
+    message = ("You got BlackJack!")
     hasBlackJack = true
 }else{
     message = ("You're out of the game!")
@@ -32,5 +34,6 @@ if(sum < 21){
 
 //Display the message on the page
 messageEl.textContent = message
-
+//Display the sum on the page
+sumEl.textContent +=sum
 }
