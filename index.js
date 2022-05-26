@@ -4,6 +4,8 @@ let messageEl = document.getElementById("message-el")
 // let sumEl = document.getElementById("sum-el")
 //Using querySelector on JS
 let sumEl = document.querySelector("#sum-el")
+//Get the value of cards-el element from the HTML
+let cardsEl = document.getElementById("cards-el")
 
 
 //Declare of Card Values
@@ -39,4 +41,6 @@ if(sum < 21){
 messageEl.textContent = message
 //Display the sum on the page
 sumEl.textContent +=sum
+//Display the cards on the page
+cardsEl.textContent = "Cards: " + firstCard + "  " + secondCard
 }
